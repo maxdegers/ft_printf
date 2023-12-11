@@ -6,20 +6,21 @@
 #    By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 10:32:01 by mbrousse          #+#    #+#              #
-#    Updated: 2023/12/11 21:50:26 by mbrousse         ###   ########.fr        #
+#    Updated: 2023/12/11 22:06:20 by mbrousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SOURCES =	ft_printf.c\
-			character.c\
-			hexadecimal_lower.c\
-			pointer.c\
+SOURCES =	character.c\
 			decimal.c\
+			ft_printf.c\
+			hexadecimal_lower.c\
 			hexadecimal_upper.c\
-			string.c\
 			integer.c\
 			percent.c\
-			unsigned.c
+			pointer.c\
+			string.c\
+			unsigned.c\
+			ft_printf_utils.c
 
 # BONUS_SOURCES =
 

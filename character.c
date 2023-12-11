@@ -6,9 +6,13 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 21:41:34 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/12/11 21:50:36 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/12/11 21:57:59 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
