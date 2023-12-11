@@ -6,12 +6,13 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 10:31:49 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/12/11 10:43:16 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/12/11 21:43:50 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFTPRINTF_H
 # define LIBFTPRINTF_H
 
+#include <unistd.h>
 
 #endif

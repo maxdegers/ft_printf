@@ -6,12 +6,20 @@
 #    By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 10:32:01 by mbrousse          #+#    #+#              #
-#    Updated: 2023/12/11 10:44:16 by mbrousse         ###   ########.fr        #
+#    Updated: 2023/12/11 21:40:37 by mbrousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SOURCES =	ft_printf.c\
-			
+			character.c\
+			hexadecimal_lower.c\
+			pointer.c\
+			decimal.c\
+			hexadecimal_upper.c\
+			string.c\
+			integer.c\
+			percent.c\
+			unsigned.c
 
 # BONUS_SOURCES =
 
