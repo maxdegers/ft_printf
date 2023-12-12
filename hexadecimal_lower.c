@@ -6,13 +6,13 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 21:42:33 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/12/11 22:39:08 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/12/12 17:36:06 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_rec(unsigned int nbr, char *base, unsigned int size)
+static void	ft_rec(unsigned int nbr, char *base, unsigned int size)
 {
 	if (nbr >= size)
 	{
@@ -23,7 +23,7 @@ void	ft_rec(unsigned int nbr, char *base, unsigned int size)
 		ft_putchar(base[nbr]);
 }
 
-void	ft_nbr_verif(int nbr, char *base, int size)
+static void	ft_nbr_verif(int nbr, char *base, int size)
 {
 	if (nbr < 0)
 	{
@@ -34,11 +34,12 @@ void	ft_nbr_verif(int nbr, char *base, int size)
 		ft_rec(nbr, base, size);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+void	ft_hexadecimal_lower(int nbr)
 {
-	int	size;
-	int	i;
-	int	i_b;
+	int			size;
+	int			i;
+	int			i_b;
+	static char	*base = "0123456789abcdef";
 
 	size = ft_strlen(base);
 	if (size < 2)
