@@ -18,3 +18,4 @@ int	ft_printf(const char *str, ...)
 	va_list	ap;
 	va_arg();
 }
+
