@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hexadecimal_lower.c                                :+:      :+:    :+:   */
+/*   hexadecimal.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 21:42:33 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/12/12 17:36:06 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/12/18 10:56:09 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_lenhex(unsigned	int nbr)
 {
@@ -36,8 +36,7 @@ static void	ft_rec(unsigned int nbr, char *base)
 		ft_putchar(base[nbr]);
 }
 
-
-void	ft_puthexadecimal(unsigned int nbr, static char *base)
+int	ft_puthexadecimal(unsigned int nbr, char *base)
 {
 	if (nbr == 0)
 		return (ft_putchar('0'));

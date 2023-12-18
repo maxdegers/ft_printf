@@ -10,16 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-SOURCES =	character.c\
-			decimal.c\
-			ft_printf.c\
-			hexadecimal_lower.c\
-			hexadecimal_upper.c\
-			integer.c\
-			percent.c\
+SOURCES =	ft_printf.c\
+			hexadecimal.c\
 			pointer.c\
-			string.c\
-			unsigned.c\
 			ft_printf_utils.c
 
 # BONUS_SOURCES =
@@ -28,7 +21,7 @@ OBJECTS = ${SOURCES:.c=.o}
 
 # BONUS_OBJECTS= ${BONUS_SOURCES:.c=.o}
 
-HEADER_FILE = libftprintf.h
+HEADER_FILE = ft_printf.h
 
 NAME = libftprintf.a
 
