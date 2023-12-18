@@ -12,7 +12,7 @@
 
 #include "libftprintf.h"
 
-void	ft_pointer(void *str)
+void	ft_putpoint(void *str)
 {
 	int	i;
 

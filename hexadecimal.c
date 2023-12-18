@@ -12,50 +12,36 @@
 
 #include "libftprintf.h"
 
-static void	ft_rec(unsigned int nbr, char *base, unsigned int size)
+int	ft_lenhex(unsigned	int nbr)
 {
-	if (nbr >= size)
+	int	len;
+
+	len = 0;
+	while (nbr != 0)
 	{
-		ft_rec(nbr / size, base, size);
-		ft_rec(nbr % size, base, size);
+		len++;
+		nbr = nbr / 16;
+	}
+	return (len);
+}
+
+static void	ft_rec(unsigned int nbr, char *base)
+{
+	if (nbr >= 16)
+	{
+		ft_rec(nbr / 16, base);
+		ft_rec(nbr % 16, base);
 	}
 	else
 		ft_putchar(base[nbr]);
 }
 
-static void	ft_nbr_verif(int nbr, char *base, int size)
+
+void	ft_puthexadecimal(unsigned int nbr, static char *base)
 {
-	if (nbr < 0)
-	{
-		write(1, "-", 1);
-		ft_rec(nbr * -1, base, size);
-	}
+	if (nbr == 0)
+		return (ft_putchar('0'));
 	else
-		ft_rec(nbr, base, size);
-}
-
-void	ft_hexadecimal_lower(int nbr)
-{
-	int			size;
-	int			i;
-	int			i_b;
-	static char	*base = "0123456789abcdef";
-
-	size = ft_strlen(base);
-	if (size < 2)
-		return ;
-	i = -1;
-	while (base[++i])
-	{
-		if (base[i] == '+' || base[i] == '-')
-			return ;
-		i_b = 1;
-		while (base[i_b] && i != i_b)
-		{
-			if (base[i_b] == base[i])
-				return ;
-			i_b++;
-		}
-	}
-	ft_nbr_verif(nbr, base, size);
+		ft_rec(nbr, base);
+	return (ft_lenhex(nbr));
 }
