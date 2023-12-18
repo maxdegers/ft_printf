@@ -6,7 +6,7 @@
 #    By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 10:32:01 by mbrousse          #+#    #+#              #
-#    Updated: 2023/12/11 22:06:20 by mbrousse         ###   ########.fr        #
+#    Updated: 2023/12/18 13:17:23 by mbrousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,11 +15,7 @@ SOURCES =	ft_printf.c\
 			pointer.c\
 			ft_printf_utils.c
 
-# BONUS_SOURCES =
-
 OBJECTS = ${SOURCES:.c=.o}
-
-# BONUS_OBJECTS= ${BONUS_SOURCES:.c=.o}
 
 HEADER_FILE = ft_printf.h
 
@@ -39,16 +35,10 @@ all: ${NAME}
 
 clean:
 	rm -f ${OBJECTS} 
-# ${BONUS_OBJECTS}
 
 fclean: clean
 	rm -f ${NAME}
 
 re: fclean all
 
-# bonus : 
-# 	@make SOURCES="$(SOURCES) $(BONUS_SOURCES)"
-
-
-.PHONY: all clean fclean re 
-# bonus
+.PHONY: all clean fclean re

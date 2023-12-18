@@ -6,13 +6,13 @@
 /*   By: mbrousse <mbrousse@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 21:42:33 by mbrousse          #+#    #+#             */
-/*   Updated: 2023/12/18 10:56:09 by mbrousse         ###   ########.fr       */
+/*   Updated: 2023/12/18 13:16:05 by mbrousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_lenhex(unsigned	int nbr)
+static int	ft_lenhex(unsigned	int nbr)
 {
 	int	len;
 
